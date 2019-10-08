@@ -12719,7 +12719,8 @@ var pageToShow = function pageToShow(pageName) {
 };
 
 var configValue = {
-  showSpeakerSpeakingDays: true
+  showSpeakerSpeakingDays: false,
+  showSignMeUP: false
 };
 
 var App = function App(_ref) {
@@ -12728,13 +12729,13 @@ var App = function App(_ref) {
     value: configValue,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 19
+      lineNumber: 20
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 20
+      lineNumber: 21
     },
     __self: this
   }, pageToShow(pageName)), ";");
@@ -13134,10 +13135,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_toastify_dist_ReactToastify_css__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_toastify_dist_ReactToastify_css__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var react_toastify__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-toastify */ "./node_modules/react-toastify/lib/index.js");
 /* harmony import */ var react_toastify__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react_toastify__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _App__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./App */ "./src/App.js");
 
 
 
 var _jsxFileName = "C:\\Users\\david.jolliffe\\Desktop\\react-dev\\update\\src\\SignMeUp.js";
+
 
 
 
@@ -13165,6 +13168,8 @@ var SignMeUp = function SignMeUp(_ref) {
       sendProcessing = _useState6[0],
       setSendProcessing = _useState6[1];
 
+  var context = Object(react__WEBPACK_IMPORTED_MODULE_3__["useContext"])(_App__WEBPACK_IMPORTED_MODULE_6__["ConfigContext"]);
+
   function validateEmail(email) {
     var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(email);
@@ -13191,30 +13196,30 @@ var SignMeUp = function SignMeUp(_ref) {
 
   var buttonText = sendProcessing ? "processing..." : "Get Updates"; //console.log("src/SignMeUp called");
 
-  return react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
+  return context.showSignMeUp === false ? null : react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
     className: "container",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 43
+      lineNumber: 45
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 44
+      lineNumber: 46
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(react_toastify__WEBPACK_IMPORTED_MODULE_5__["ToastContainer"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 45
+      lineNumber: 47
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
     className: "content",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 46
+      lineNumber: 48
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("input", (_React$createElement = {
@@ -13229,7 +13234,7 @@ var SignMeUp = function SignMeUp(_ref) {
     required: true
   }, Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_React$createElement, "required", true), Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_React$createElement, "__source", {
     fileName: _jsxFileName,
-    lineNumber: 47
+    lineNumber: 49
   }), Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_React$createElement, "__self", this), _React$createElement)), "\xA0", react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("button", {
     disabled: !emailValid || sendProcessing,
     className: "btn",
@@ -13237,7 +13242,7 @@ var SignMeUp = function SignMeUp(_ref) {
     type: "submit",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 60
+      lineNumber: 62
     },
     __self: this
   }, buttonText))));
@@ -13621,25 +13626,25 @@ var Speakers = function Speakers(_ref) {
       lineNumber: 82
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("div", {
+  }, context.showSpeakerSpeakingDays === false ? null : react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("div", {
     className: "hide",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 83
+      lineNumber: 84
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("div", {
     className: "form-check-inline",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 84
+      lineNumber: 85
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("label", {
     className: "form-check-label",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 85
+      lineNumber: 86
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("input", {
@@ -13649,21 +13654,21 @@ var Speakers = function Speakers(_ref) {
     checked: speakingSaturday,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 86
+      lineNumber: 87
     },
     __self: this
   }), "Saturday Speakers")), react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("div", {
     className: "form-check-inline",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 95
+      lineNumber: 96
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("label", {
     className: "form-check-label",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 96
+      lineNumber: 97
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("input", {
@@ -13673,21 +13678,21 @@ var Speakers = function Speakers(_ref) {
     checked: speakingSunday,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 97
+      lineNumber: 98
     },
     __self: this
   }), "Sunday Speakers")))), react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("div", {
     className: "row",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 108
+      lineNumber: 110
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("div", {
     className: "card-deck",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 109
+      lineNumber: 111
     },
     __self: this
   }, speakerListFiltered.map(function (_ref4) {
@@ -13706,7 +13711,7 @@ var Speakers = function Speakers(_ref) {
       bio: bio,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 113
+        lineNumber: 115
       },
       __self: this
     });
@@ -13717,7 +13722,7 @@ var Speakers = function Speakers(_ref) {
 
 /***/ }),
 
-/***/ 4:
+/***/ 0:
 /*!***********************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Fspeakers&absolutePagePath=C%3A%5CUsers%5Cdavid.jolliffe%5CDesktop%5Creact-dev%5Cupdate%5Cpages%5Cspeakers.js ***!
   \***********************************************************************************************************************************************************/
@@ -13740,5 +13745,5 @@ module.exports = dll_03a060600fe0e7d6fe3e;
 
 /***/ })
 
-},[[4,"static/runtime/webpack.js","styles"]]]);
+},[[0,"static/runtime/webpack.js","styles"]]]);
 //# sourceMappingURL=speakers.js.map
